@@ -124,6 +124,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  
   // Normalize Gemini's shape into { content: [{ text }] } for the frontend.
   const text = (data.candidates?.[0]?.content?.parts ?? [])
     .map((p) => p?.text ?? "")
